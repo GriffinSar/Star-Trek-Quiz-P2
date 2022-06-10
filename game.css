@@ -3,8 +3,8 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
-    border: 0.1rem solid rgba(242, 227, 16, 0.25);
-    background-color: white;
+    border: 0.1rem solid #6b6bb2;
+    background-color: #6b6bb2;
     border-radius: 6px;
 }
 
@@ -17,7 +17,7 @@
 
 .choice-prefix {
     padding: 1.5rem 2.5rem;
-    background-color: #f6cf23;
+    background-color: #cc99cc;
     color: white;
 }
 
@@ -54,12 +54,12 @@
 #progressBar {
     width: 20rem;
     height: 4rem;
-    border: 0.3rem solid #f6cf23;
+    border: 0.3rem solid #cc6666;
     margin-top: 1.5rem;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: #f6cf23;  
+  background-color: #cc6666;  
   width: 0%;
 }
