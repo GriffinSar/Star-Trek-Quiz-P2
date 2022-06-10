@@ -11,35 +11,52 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: 'Inside which HTML element do we put the JavaScript??',
-        choice1: '<script>',
-        choice2: '<javascript>',
-        choice3: '<js>',
-        choice4: '<scripting>',
-        answer: 1,
+        question: 'Who Proceeded James T. Kirk as captain of the U.S.S. Enterprise? ',
+        choice1: 'Robert April',
+        choice2: 'Christopher Pike',
+        choice3: 'Spock',
+        choice4: 'Jean Luc Picard',
+        answer: 2,
     },
     {
         question:
-            "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choice1: "<script href='xxx.js'>",
-        choice2: "<script name='xxx.js'>",
-        choice3: "<script src='xxx.js'>",
-        choice4: "<script file='xxx.js'>",
+            "Who Captained the first known Federation ship to spar with the Borg and survive?",
+        choice1: "Kirk",
+        choice2: "Janeway",
+        choice3: "Picard",
+        choice4: "Sisko",
         answer: 3,
     },
     {
-        question: " How do you write 'Hello World' in an alert box?",
-        choice1: "msgBox('Hello World');",
-        choice2: "alertBox('Hello World');",
-        choice3: "msg('Hello World');",
-        choice4: "alert('Hello World');",
-        answer: 4,
+        question: " Which Captain became known as the Emissary of the Prophets to the Bajorans",
+        choice1: "Sisko",
+        choice2: "Picard",
+        choice3: "Archer",
+        choice4: "Burnham",
+        answer: 1,
+    },
+
+    {
+        question: " Wich captain was so close to William T. Riker that he likened them to his cha'Dlch?",
+        choice1: "Picard",
+        choice2: "Michael Burnham",
+        choice3: "Carol Freeman",
+        choice4: "Sisko",
+        answer: 3,
+    },
+    {
+        question: " Which captain left Starfleet after they refused aid to the Romulans?",
+        choice1: "Kirk",
+        choice2: "Picard",
+        choice3: "Burnham",
+        choice4: "Archer",
+        answer: 2,
     },
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -55,6 +72,8 @@ getNewQuestion = () => {
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/ ${ MAX_QUESTIONS}`;
+    //Update the progress bar
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
