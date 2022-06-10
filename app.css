@@ -1,6 +1,7 @@
 :root {
     background-color: #ecf5ff;
     font-size: 62.5%;
+   
 }
 
 *{
@@ -8,8 +9,86 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: rgb(235, 223, 223);
 }
+
+/*header*/
+
+header {
+  height: 150px; 
+}
+
+#logo {
+  width: 50%;
+  height: 150px;
+  padding-top: 2rem;
+  float: left;
+}
+
+img {
+  height: 100px;  
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ff9900;
+  border-radius: 4px;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  height: 50px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  padding-top: 4rem;
+  padding-left: 2rem; 
+  border-radius: 4px;
+  width: 40%;
+  float: left;
+  
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6cf23;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/*body*/
+
+body {
+  background:url(assets/images/star-background.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ff9900;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {  
+  display: flex;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #ff9900;}
+
 
 h1,
 h2,
@@ -20,7 +99,7 @@ h4 {
 
 h1 {
     font-size: 5.4rem;
-    color: #56a5eb;
+    color: #f6cf23;
     margin-bottom: 5rem;
 }
 
@@ -51,6 +130,7 @@ h3 {
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+   
 }
 
 .container > * {
@@ -85,16 +165,18 @@ h3 {
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #56a5eb;
+    border: 0.1rem solid #f6cf23;
+    border-radius: 4px;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #56a5eb;
-    background-color: white;
+    color: #040404;
+    background-color: #ff9900;
   }
   
   .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    background-color: #f6cf23;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(107,107,178, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
@@ -103,4 +185,20 @@ h3 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+  }
+
+  /*footer*/
+
+  footer{
+    height: 100px;
+  }
+  .foot {
+    height: 50px;
+    width: 100vw;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color:#ecf5ff;
+   
   }
