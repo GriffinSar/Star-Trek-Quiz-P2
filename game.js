@@ -3,6 +3,9 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const easyQuestion = document.querySelector(".levelEasy");
+const qPicture = document.querySelector('.Q-pic');
+const gContainer = document.querySelector('.container');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -136,6 +139,15 @@ startGame = () => {
   availableQuesions = [...questions];
   getNewQuestion();
 };
+
+//choosing level functionality
+
+easyQuestion.addEventListener ('click', function(){
+  console.log('hello how are you?');
+  qPicture.classList.add('hidden');
+  
+
+});
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {

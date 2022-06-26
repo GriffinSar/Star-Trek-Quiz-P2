@@ -241,3 +241,32 @@ h3 {
     margin: 0 auto;
     padding: 2rem;
   }
+
+  /*footer*/
+footer{
+  display:flex;
+  height: 100px;
+  width: 100%;
+  justify-content:center;
+  align-items:center;
+}
+
+/* sets the list horizontally*/
+.social-networks > li {
+  display: inline;
+  float:left;
+  margin:20px;
+}
+
+/* appearance of list items*/
+.social-networks i {
+  font-size: 2.5rem;
+  margin: 1%;
+  padding: 3% 5%;
+  color:#ff9900;
+}
+
+/*sets pink when hover*/
+li i:hover {
+  color: #f6cf23;
+}

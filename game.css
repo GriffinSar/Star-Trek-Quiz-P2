@@ -1,3 +1,14 @@
+.container {
+    
+}
+
+.Q-pic {
+    width: 50%;
+    height: 50%;
+    margin-left: 275px;
+    padding-top: 50px;
+    visibility: visible;
+}
 .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
@@ -63,3 +74,50 @@
   background-color: #cc6666;  
   width: 0%;
 }
+
+/*footer*/
+footer{
+    display:flex;
+    height: 100px;
+    width: 100%;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  /* sets the list horizontally*/
+  .social-networks > li {
+    display: inline;
+    float:left;
+    margin:20px;
+  }
+  
+  /* appearance of list items*/
+  .social-networks i {
+    font-size: 2.5rem;
+    margin: 1%;
+    padding: 3% 5%;
+    color:#ff9900;
+  }
+  
+  /*sets pink when hover*/
+  li i:hover {
+    color: #f6cf23;
+  }
+
+  .level-choice {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  /*level button styles*/
+  #lvl-button {
+    background-color: #ff9900;
+    border-radius: 4px;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    width: 100px;
+    height: 50px;
+    
+  }
