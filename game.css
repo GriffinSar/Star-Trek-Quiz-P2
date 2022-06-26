@@ -1,11 +1,13 @@
 .container {
-    
+ 
 }
 
 .Q-pic {
-    width: 50%;
-    height: 50%;
-    margin-left: 275px;
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 50px;
     visibility: visible;
 }
@@ -73,6 +75,20 @@
   height: 3.4rem;
   background-color: #cc6666;  
   width: 0%;
+}
+
+#timer {
+  background-color: #f6cf23;
+  width: 150px;
+  height: 45px;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  
 }
 
 /*footer*/

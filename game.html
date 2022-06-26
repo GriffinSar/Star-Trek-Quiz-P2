@@ -10,29 +10,25 @@
 </head>
 <body>
     <header>
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="game.html">Game</a>
-              <a href="shows.html">The Shows</a>
-            </div>
-          </div>
-        <div id="logo">
-            <a href="index.html">
-                <img src="assets/images/logo-startrek.webp">
-            </a>
-    </div>
+        <nav class="sticky">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="game.html">Game</a>
+                  <a href="shows.html">The Shows</a>
+                </div>
+              </div>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-startrek.webp">
+                </a>
+        </div>
+    </nav>
     </header>
-    
-
-    <div class = "level-choice">
-        <button id= lvl-button class= "levelEasy"> Easy </button>
-        <button id = "lvl-button"> Medium </button>
-        <button id = "lvl-button"> Hard </button>
-    </div>
 
     <img src="assets/images/Q-judge.webp" class="Q-pic">
+    
     <div class="container">
         <div id="game" class="justify-center flex-column">
             <div id = "hud">
@@ -72,6 +68,8 @@
             </div>
         </div>
     </div>
+
+    <div id="timer"></div>
     <footer>
         <div class = "footer-list">
             <ul class="social-networks">

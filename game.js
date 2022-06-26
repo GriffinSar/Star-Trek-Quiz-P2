@@ -3,15 +3,14 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
-const easyQuestion = document.querySelector(".levelEasy");
-const qPicture = document.querySelector('.Q-pic');
-const gContainer = document.querySelector('.container');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+var countDownTimer = 120;
 
+//array of objects for each question and answer
 let questions = [
     {
         question: 'Who Proceeded James T. Kirk as captain of the U.S.S. Enterprise? ',
@@ -132,22 +131,17 @@ let questions = [
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 14;
+const INNCORECT_TIMER = -10;
 
 startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuesions = [...questions];
   getNewQuestion();
+  countdownTimer = 120;
 };
 
-//choosing level functionality
 
-easyQuestion.addEventListener ('click', function(){
-  console.log('hello how are you?');
-  qPicture.classList.add('hidden');
-  
-
-});
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -186,7 +180,9 @@ choices.forEach(choice => {
 
     if (classToApply === "correct") {
       incrementScore(CORRECT_BONUS);
-    }
+    } else {
+      countDownTimer -= 10
+  }
 
     selectedChoice.parentElement.classList.add(classToApply);
 
@@ -197,9 +193,40 @@ choices.forEach(choice => {
   });
 });
 
+//increases score for each right answer
 incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
 
+setInterval(function () {
+
+  if (countDownTimer < 0) {
+      endGame();
+  } else {
+      countDownTimer--
+  }
+
+  const timer = document.getElementById("timer")
+  var timerString = "";
+  if (countDownTimer > 60) {
+      timerString += Math.floor(countDownTimer / 60) + "m ";
+  }
+
+  // make it so when the timer gets below 30 seconds the color changes from green to red
+  if (countDownTimer < 30) {
+      timer.setAttribute("class", "timerRed")
+  }
+
+  var seconds = countDownTimer % 60
+  timerString += seconds + "s"
+  timer.innerHTML = timerString
+}, 1000)
+
+
+function endGame() {
+  return window.location.assign("/end.html")
+}
+
+//calls start game function
 startGame();

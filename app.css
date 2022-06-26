@@ -15,13 +15,12 @@
 /*header*/
 
 header {
-  height: 150px; 
+  height: 80px; 
 }
 
 #logo {
   width: 50%;
-  height: 150px;
-  padding-top: 2rem;
+  height: 100px;
   float: left;
 }
 
@@ -68,6 +67,20 @@ img {
   display: block;
 }
 
+/* To make NAV sticky*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #040404;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 30px;
+}
 /*body*/
 
 body {
@@ -109,7 +122,7 @@ h1 > span {
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
     margin-bottom: 4rem;
     font-weight: 700;
 }
@@ -119,11 +132,19 @@ h3 {
     font-weight: 500;
 }
 
+/* ship gif */
+.ship {
+  height: 30%;
+  margin-left: 350px;
+}
+
 /* UTILITIES */
 
 .container {
     width: 100vw;
+    /*
     height: 100vh;
+    */
     display: flex;
     justify-content: center;
     align-items: center;
