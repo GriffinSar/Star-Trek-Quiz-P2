@@ -5,41 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Congrats!</title>
+    <link rel = "stylesheet" href = "end.css">
+        <title>Congrats!</title>
 </head>
 <body>
     <header>
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="game.html">Game</a>
-              <a href="shows.html">The Shows</a>
-            </div>
-          </div>
-        <div id="logo">
-            <a href="index.html">
-                <img src="assets/images/logo-startrek.webp">
-            </a>
-    </div>
+        <nav class="sticky">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="game.html">Game</a>
+                  <a href="shows.html">The Shows</a>
+                </div>
+              </div>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-startrek.webp">
+                </a>
+        </div>
+    </nav>
     </header>
    <div class="container-end">
        <div id="end" class="flex-center flex-column">
         <h1 id="finalScore"></h1>
        </div>
    </div>
-   <h2>
-    Score 0-40
-    <img src="assets/images/picard-dissapointed.webp">
+   <h2 class = "win-score">
+    Score 0 - 40
+</h2>
+    <img src="assets/images/picard-dissapointed.webp" class = "win-image">
+
+ <h2 class = "win-score">
+     Score 50 - 100
  </h2>
- <h2>
-     Score 50-100
-     <img src="assets/images/riker2.webp">
- </h2>
- <h2>
+ <img src="assets/images/riker2.webp" class = "win-image">
+ <h2 class = "win-score">
      Score 100 - 140
-     <img src="assets/images/barclay.webp">
  </h2>
+ <img src="assets/images/barclay.webp" class = "win-image">
+
+ <div class = name-generator>
+    <p class="instructiions">Click here to generate your Star Trek Name</p>
+    <button class="name-button">Click Here!</button>
+    <p class="fname">Sarah</p>
+    <p class="lname">Griffin</p>
+ </div>
 
  <div id="endbtn">
     <a class="btn" href="game.html">Play Again!</a>
@@ -47,16 +58,28 @@
  </div>
 
    <footer>
-    <p class="foot">
-        Sarah Griffin
-        <br>
-        The Enterprise
-        <br>
-        Star Trek
-        <br>
-        Design
-    </p>
+    <div class = "footer-list">
+        <ul class="social-networks">
+            <li>
+               <a href="https://facebook.com" target="_blank" rel="noopener"
+                  aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a> 
+            </li>
+            <li> 
+               <a href="https://twitter.com" target="_blank" rel="noopener"
+                  aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+               <a href="https://youtube.com" target="_blank" rel="noopener"
+                  aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
+            </li>
+            <li>
+               <a href="https://instagram.com" target="_blank" rel="noopener"
+                  aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+            </li>
+         </ul>
+    </div>
 </footer>
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script> 
    <script src="end.js"></script>
 </body>
 </html>
